@@ -10,7 +10,7 @@ while True:
 
         message = [{'role': 'user', 'content': ask}]
         
-        response: ChatResponse = chat(model='qwen3:4b', messages=message, tools=[soma, list_file, read_file, list_file], think=True)
+        response: ChatResponse = chat(model='qwen3:4b', messages=message, tools=[soma, list_file, read_file], think=True)
 
         # append in context assistent decision
         message.append(response.message.model_dump())
